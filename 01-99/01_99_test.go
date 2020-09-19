@@ -74,3 +74,8 @@ func TestSearchRotatedSortedArrayII(t *testing.T) {
 	}
 	t.Log(searchByFindPivotII(nums, 2))
 }
+
+func TestThreeSum(t *testing.T) {
+	nums := []int{-2, 0, 1, 1, 2}
+	t.Log(threeSum(nums))
+}
