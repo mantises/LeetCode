@@ -79,3 +79,11 @@ func TestThreeSum(t *testing.T) {
 	nums := []int{-2, 0, 1, 1, 2}
 	t.Log(threeSum(nums))
 }
+
+func TestMergeSortedArray(t *testing.T) {
+
+	nums1 := []int{1, 2, 3, 5, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+	nums2 := []int{2, 4, 5, 6, 7, 9, 10}
+
+	merge(nums1, 5, nums2, 7)
+}
