@@ -1,6 +1,7 @@
 package _200_299
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -25,4 +26,11 @@ func TestReverseLinkedList(t *testing.T) {
 	l3.Next = l4
 	l4.Next = l5
 	reverseList(l1)
+}
+
+func TestPalindromeLinkedList(t *testing.T) {
+	l1 := &ListNode{Val: 1}
+	l2 := &ListNode{Val: 2}
+	l1.Next = l2
+	fmt.Println(isPalindrome(l1))
 }
