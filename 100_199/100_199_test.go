@@ -18,3 +18,18 @@ func TestLRUCache(t *testing.T) {
 	t.Log(lRUCache.Get(1)) // return -1 (not found)
 	t.Log(lRUCache.Get(2)) // return 3
 }
+
+func TestReverseLinkedList(t *testing.T) {
+	l1 := &ListNode{Val: 1}
+	l2 := &ListNode{Val: 2}
+	l3 := &ListNode{Val: 3}
+	l4 := &ListNode{Val: 4}
+	l5 := &ListNode{Val: 5}
+	// l1->l2->l3->l4
+	l1.Next = l2
+	l2.Next = l3
+	l3.Next = l4
+	// l5->l3->l4
+	l5.Next = l3
+	getIntersectionNode(l1, l5)
+}
