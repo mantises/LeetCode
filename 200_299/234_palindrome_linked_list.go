@@ -25,7 +25,6 @@ func getMidNode(head *ListNode) *ListNode {
 		slow = slow.Next
 		fast = fast.Next.Next
 	}
-
 	if fast != nil {
 		slow = slow.Next
 	}

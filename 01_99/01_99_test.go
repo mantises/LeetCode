@@ -1,6 +1,9 @@
 package _01_99
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestTwoSum(t *testing.T) {
 	nums := []int{-1, -2, -3, -4, -5}
@@ -81,9 +84,26 @@ func TestThreeSum(t *testing.T) {
 }
 
 func TestMergeSortedArray(t *testing.T) {
-
 	nums1 := []int{1, 2, 3, 5, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 	nums2 := []int{2, 4, 5, 6, 7, 9, 10}
-
 	merge(nums1, 5, nums2, 7)
+}
+
+func TestMergeKSortedLists(t *testing.T) {
+	l1 := &ListNode{Val: 1}
+	l2 := &ListNode{Val: 4}
+	l3 := &ListNode{Val: 5}
+	l1.Next = l2
+	l2.Next = l3
+
+	l4 := &ListNode{Val: 2}
+	l5 := &ListNode{Val: 13}
+	l4.Next = l5
+
+	l6 := &ListNode{Val: 9}
+	l7 := &ListNode{Val: 16}
+	l6.Next = l7
+	lists := []*ListNode{l1, l4, l6}
+	s := mergeKLists(lists)
+	fmt.Println(s)
 }
