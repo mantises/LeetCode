@@ -107,3 +107,9 @@ func TestMergeKSortedLists(t *testing.T) {
 	s := mergeKLists(lists)
 	fmt.Println(s)
 }
+
+func TestSortColors(t *testing.T) {
+	nums := []int{2, 2, 2, 1, 0, 0, 1, 2, 0, 0}
+	sortColors(nums)
+	fmt.Println(nums)
+}
