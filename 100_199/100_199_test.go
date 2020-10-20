@@ -64,3 +64,22 @@ func TestDetectCycle(t *testing.T) {
 	l5.Next = l3
 	fmt.Println(detectCycle(l1).Val)
 }
+
+func TestConstructorMinStack(t *testing.T) {
+	obj := ConstructorMinStack()
+	obj.Push(-10)
+	obj.Push(10)
+	obj.Push(-2)
+	obj.Push(-20)
+	param3 := obj.Top()
+	param4 := obj.GetMin()
+	fmt.Println(param3, param4)
+	obj.Pop()
+	param3 = obj.Top()
+	param4 = obj.GetMin()
+	fmt.Println(param3, param4)
+	obj.Pop()
+	param3 = obj.Top()
+	param4 = obj.GetMin()
+	fmt.Println(param3, param4)
+}
