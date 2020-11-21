@@ -113,3 +113,9 @@ func TestSortColors(t *testing.T) {
 	sortColors(nums)
 	fmt.Println(nums)
 }
+
+func TestMaximumSubarray(t *testing.T) {
+	nums := []int{1, 2, -1}
+	fmt.Println(maxSubArrayByDP(nums))
+	fmt.Println(maxSubArrayByDivideAndConquer(nums))
+}
