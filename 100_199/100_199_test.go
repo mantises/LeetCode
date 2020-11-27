@@ -83,3 +83,15 @@ func TestConstructorMinStack(t *testing.T) {
 	param4 = obj.GetMin()
 	fmt.Println(param3, param4)
 }
+
+func TestBestTimeToBuySellStock(t *testing.T) {
+	prices := []int{1, 3, 6, 8, 2, 5, 10, 11, 0}
+	fmt.Println(maxProfit(prices))
+	fmt.Println(maxProfitByDP(prices))
+}
+
+func TestHorseRobber(t *testing.T) {
+	nums := []int{2, 1, 1, 2}
+	fmt.Println(rob(nums))
+	fmt.Println(robV2(nums))
+}

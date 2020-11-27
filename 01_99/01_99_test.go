@@ -119,3 +119,9 @@ func TestMaximumSubarray(t *testing.T) {
 	fmt.Println(maxSubArrayByDP(nums))
 	fmt.Println(maxSubArrayByDivideAndConquer(nums))
 }
+
+func TestEditDistance(t *testing.T) {
+	word1 := "intention"
+	word2 := "execution"
+	fmt.Println(minDistanceV2(word1, word2))
+}
