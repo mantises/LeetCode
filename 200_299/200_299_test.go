@@ -34,3 +34,12 @@ func TestPalindromeLinkedList(t *testing.T) {
 	l1.Next = l2
 	fmt.Println(isPalindrome(l1))
 }
+
+func TestMaximalSquare(t *testing.T) {
+	mat := [][]byte{
+		{'1', '0', '1', '0', '0'},
+		{'1', '0', '1', '1', '1'},
+		{'1', '1', '1', '1', '1'},
+		{'1', '0', '0', '1', '0'}}
+	fmt.Println(maximalSquare(mat))
+}
