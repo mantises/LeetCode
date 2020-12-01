@@ -43,3 +43,11 @@ func TestMaximalSquare(t *testing.T) {
 		{'1', '0', '0', '1', '0'}}
 	fmt.Println(maximalSquare(mat))
 }
+
+func TestNumSquares(t *testing.T) {
+	fmt.Println(numSquares(13))
+}
+
+func TestCountPrimes(t *testing.T) {
+	fmt.Println(countPrimes(10))
+}

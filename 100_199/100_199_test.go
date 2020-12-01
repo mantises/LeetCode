@@ -95,3 +95,9 @@ func TestHorseRobber(t *testing.T) {
 	fmt.Println(rob(nums))
 	fmt.Println(robV2(nums))
 }
+
+func TestWordBreak(t *testing.T) {
+	s := "leetcode"
+	words := []string{"leet", "code"}
+	fmt.Println(wordBreak(s, words))
+}
