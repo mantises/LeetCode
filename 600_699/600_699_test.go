@@ -1,7 +1,10 @@
 package _600_699
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
-func TestAverageOfLevels(t *testing.T) {
-
+func TestCountSubstrings(t *testing.T) {
+	fmt.Println(countSubstrings("aaaaa"))
 }
