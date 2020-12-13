@@ -87,7 +87,6 @@ func TestConstructorMinStack(t *testing.T) {
 func TestBestTimeToBuySellStock(t *testing.T) {
 	prices := []int{1, 3, 6, 8, 2, 5, 10, 11, 0}
 	fmt.Println(maxProfit(prices))
-	fmt.Println(maxProfitByDP(prices))
 }
 
 func TestHorseRobber(t *testing.T) {
@@ -100,4 +99,9 @@ func TestWordBreak(t *testing.T) {
 	s := "leetcode"
 	words := []string{"leet", "code"}
 	fmt.Println(wordBreak(s, words))
+}
+
+func TestMaxProfitIII(t *testing.T) {
+	nums := []int{4, 3, 5, 0, 3, 1, 4}
+	fmt.Println(maxProfitIII(nums))
 }
