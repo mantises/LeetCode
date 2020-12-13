@@ -1,7 +1,5 @@
 package _100_199
 
-import "math"
-
 /*
 Say you have an array for which the ith element is the price of a given stock on day i.
 
@@ -28,26 +26,17 @@ func maxProfit(prices []int) int {
 	if len(prices) <= 1 {
 		return 0
 	}
-	minPrice := math.MaxInt32
-	maxProfit := math.MinInt32
-	for _, v := range prices {
-		if v < minPrice {
-			minPrice = v
-		}
-		maxProfit = int(math.Max(float64(maxProfit), float64(v-minPrice)))
+	minPrice, maxProfit := prices[0], 0
+	for i := 1; i < len(prices); i++ {
+		minPrice = min(minPrice, prices[i])
+		maxProfit = max(maxProfit, prices[i]-minPrice)
 	}
 	return maxProfit
 }
 
-func maxProfitByDP(prices []int) int {
-	if len(prices) <= 1 {
-		return 0
+func min(a, b int) int {
+	if a <= b {
+		return a
 	}
-	profits := make([]int, len(prices))
-	minPrice := prices[0]
-	for i := 1; i < len(prices); i++ {
-		minPrice = int(math.Min(float64(minPrice), float64(prices[i])))
-		profits[i] = int(math.Max(float64(profits[i-1]), float64(prices[i]-minPrice)))
-	}
-	return profits[len(prices)-1]
+	return b
 }

@@ -19,3 +19,8 @@ func TestMaxCoins(t *testing.T) {
 	nums := []int{3, 1, 5, 8}
 	fmt.Println(maxCoins(nums))
 }
+
+func TestMaxProfit(t *testing.T) {
+	prices := []int{1, 2, 3, 0, 2}
+	fmt.Println(maxProfit(prices))
+}
