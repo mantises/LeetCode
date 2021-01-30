@@ -125,3 +125,8 @@ func TestEditDistance(t *testing.T) {
 	word2 := "execution"
 	fmt.Println(minDistanceV2(word1, word2))
 }
+
+func TestLongestPalindromicSubstring(t *testing.T) {
+	s := "ababaabbcc"
+	fmt.Println(longestPalindrome(s))
+}

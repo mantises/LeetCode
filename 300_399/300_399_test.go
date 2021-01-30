@@ -24,3 +24,23 @@ func TestMaxProfit(t *testing.T) {
 	prices := []int{1, 2, 3, 0, 2}
 	fmt.Println(maxProfit(prices))
 }
+
+func TestHouseRobberIII(t *testing.T) {
+	root := &TreeNode{
+		Left: &TreeNode{
+			Left: &TreeNode{
+				Val: 4,
+			},
+			Val: 1,
+		},
+		Right: &TreeNode{
+			Val: 3,
+		},
+		Val: 2,
+	}
+	fmt.Println(rob(root))
+}
+
+func TestIntegerBreak(t *testing.T) {
+	fmt.Println(integerBreak(10))
+}

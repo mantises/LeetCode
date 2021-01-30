@@ -105,3 +105,8 @@ func TestMaxProfitIII(t *testing.T) {
 	nums := []int{4, 3, 5, 0, 3, 1, 4}
 	fmt.Println(maxProfitIII(nums))
 }
+
+func TestMaxProductSubarray(t *testing.T) {
+	nums := []int{2, 3, -2, 4}
+	fmt.Println(maxProduct(nums))
+}
