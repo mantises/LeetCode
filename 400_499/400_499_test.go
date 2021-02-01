@@ -51,3 +51,9 @@ func TestEraseOverlapIntervals(t *testing.T) {
 		{88, 117}, {89, 115}, {90, 140}, {91, 165}, {92, 133}, {93, 114}, {94, 125},
 		{95, 135}, {96, 144}, {97, 114}, {98, 183}, {99, 157}}))
 }
+
+func TestMinimumNumberOfArrows(t *testing.T) {
+	fmt.Println(findMinArrowShots([][]int{
+		{1, 2}, {2, 3}, {3, 4}, {4, 5}, {4, 6}, {6, 9},
+	}))
+}
