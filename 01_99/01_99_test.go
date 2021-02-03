@@ -130,3 +130,10 @@ func TestLongestPalindromicSubstring(t *testing.T) {
 	s := "ababaabbcc"
 	fmt.Println(longestPalindrome(s))
 }
+
+func TestMergeIntervals(t *testing.T) {
+	intervals := [][]int{
+		{2, 3}, {1, 9}, {10, 12}, {10, 12},
+	}
+	fmt.Println(mergeInterval(intervals))
+}
