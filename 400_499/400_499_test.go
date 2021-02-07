@@ -57,3 +57,9 @@ func TestMinimumNumberOfArrows(t *testing.T) {
 		{1, 2}, {2, 3}, {3, 4}, {4, 5}, {4, 6}, {6, 9},
 	}))
 }
+
+func TestQueueReconstruction(t *testing.T) {
+	fmt.Println(reconstructQueue([][]int{
+		{7, 0}, {4, 4}, {7, 1}, {5, 0}, {6, 1}, {5, 2},
+	}))
+}

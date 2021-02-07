@@ -25,3 +25,7 @@ func TestMyLinkedList(t *testing.T) {
 	fmt.Println(myList.Get(1))
 
 }
+
+func TestPartitionLabels(t *testing.T) {
+	fmt.Println(partitionLabels("babacabcbdefegdehijhklij"))
+}
