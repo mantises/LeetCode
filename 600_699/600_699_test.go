@@ -12,3 +12,7 @@ func TestCountSubstrings(t *testing.T) {
 func TestCanPlaceFlowers(t *testing.T) {
 	fmt.Println(canPlaceFlowers([]int{0, 1, 0, 0}, 1))
 }
+
+func TestCheckPossibility(t *testing.T) {
+	fmt.Println(checkPossibility([]int{4, 2, 1}))
+}

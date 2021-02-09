@@ -137,3 +137,7 @@ func TestMergeIntervals(t *testing.T) {
 	}
 	fmt.Println(mergeInterval(intervals))
 }
+
+func TestCanJump(t *testing.T) {
+	fmt.Println(canJump([]int{2, 2, 0, 1}))
+}
