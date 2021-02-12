@@ -44,3 +44,15 @@ func TestHouseRobberIII(t *testing.T) {
 func TestIntegerBreak(t *testing.T) {
 	fmt.Println(integerBreak(10))
 }
+
+func TestRemoveDuplicate(t *testing.T) {
+	fmt.Println(removeDuplicateLetters("svcavbcxs"))
+}
+
+func TestIsSubsequence(t *testing.T) {
+	fmt.Println(isSubsequence("asx", "axstvx"))
+}
+
+func TestCreateMaximumNumber(t *testing.T) {
+	fmt.Println(maxNumber([]int{5, 6, 9, 8, 7}, []int{8, 9, 4, 6}, 2))
+}
