@@ -1,6 +1,8 @@
 package _400_499
 
-import "math"
+import (
+	"math"
+)
 
 func findDisappearedNumbers(nums []int) []int {
 	for _, v := range nums {
@@ -17,4 +19,19 @@ func findDisappearedNumbers(nums []int) []int {
 		}
 	}
 	return nums[:index]
+}
+
+func findDisappearedNumbersII(nums []int) []int {
+	n := len(nums)
+	for _, v := range nums {
+		index := (v - 1) % n
+		nums[index] += n
+	}
+	res := make([]int, 0)
+	for i := 0; i < n; i++ {
+		if nums[i] <= n {
+			res = append(res, i+1)
+		}
+	}
+	return res
 }
