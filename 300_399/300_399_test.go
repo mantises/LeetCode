@@ -54,5 +54,8 @@ func TestIsSubsequence(t *testing.T) {
 }
 
 func TestCreateMaximumNumber(t *testing.T) {
-	fmt.Println(maxNumber([]int{5, 6, 9, 8, 7}, []int{8, 9, 4, 6}, 2))
+	fmt.Println(maxNumber([]int{2, 5, 6, 4, 4, 0},
+		[]int{7, 3, 8, 0, 6, 5, 7, 6, 2}, 15))
+	// fmt.Println(lexicographicalLess([]int{9, 8, 6, 5, 3}, []int{9, 8, 4, 6, 5}, 5))
+	// fmt.Println(getMaxStock([]int{4, 0, 9, 9, 0, 5, 5, 4, 7}, 4))
 }
