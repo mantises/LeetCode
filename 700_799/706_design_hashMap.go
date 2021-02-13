@@ -32,7 +32,6 @@ The number of operations will be in the range of [1, 10000].
 Please do not use the built-in HashMap library.
 
 */
-const SIZE = 10000
 
 type Entry struct {
 	k int
@@ -76,8 +75,7 @@ func (m *MyHashMap) Put(key int, value int) {
 func (m *MyHashMap) Get(key int) int {
 	l := m.hash[key%SIZE]
 	if l == nil {
-		l = list.New()
-		m.hash[key%SIZE] = l
+		return -1
 	}
 	for n, cnt := l.Front(), 0; cnt < l.Len(); {
 		if n.Value.(*Entry).k == key {
@@ -93,8 +91,7 @@ func (m *MyHashMap) Get(key int) int {
 func (m *MyHashMap) Remove(key int) {
 	l := m.hash[key%SIZE]
 	if l == nil {
-		l = list.New()
-		m.hash[key%SIZE] = l
+		return
 	}
 	for n, cnt := l.Front(), 0; cnt < l.Len(); {
 		if n.Value.(*Entry).k == key {
