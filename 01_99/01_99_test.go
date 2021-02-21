@@ -145,3 +145,7 @@ func TestCanJump(t *testing.T) {
 func TestJump(t *testing.T) {
 	fmt.Println(jump([]int{2, 3, 0, 1, 4}))
 }
+
+func TestMinWindow(t *testing.T) {
+	fmt.Println(minWindow("ABCDBEDFFBGHDI", "BDG"))
+}

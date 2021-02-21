@@ -114,3 +114,7 @@ func TestMaxProductSubarray(t *testing.T) {
 func TestCandy(t *testing.T) {
 	fmt.Println(candy([]int{1, 2, 2}))
 }
+
+func TestTwoSumArrayIsSorted(t *testing.T) {
+	fmt.Println(twoSum([]int{1, 2, 4, 5, 8}, 7))
+}
