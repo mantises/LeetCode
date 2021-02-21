@@ -118,3 +118,7 @@ func TestCandy(t *testing.T) {
 func TestTwoSumArrayIsSorted(t *testing.T) {
 	fmt.Println(twoSum([]int{1, 2, 4, 5, 8}, 7))
 }
+
+func TestValidPalindrome(t *testing.T) {
+	fmt.Println(isPalindrome("0P"))
+}

@@ -16,3 +16,11 @@ func TestCanPlaceFlowers(t *testing.T) {
 func TestCheckPossibility(t *testing.T) {
 	fmt.Println(checkPossibility([]int{4, 2, 1}))
 }
+
+func TestJudgeSquareSum(t *testing.T) {
+	fmt.Println(judgeSquareSum(7))
+}
+
+func TestValidPalindrome(t *testing.T) {
+	fmt.Println(validPalindrome("a"))
+}
