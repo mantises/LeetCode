@@ -17,3 +17,8 @@ func Test01Matrix(t *testing.T) {
 func TestMinDistance(t *testing.T) {
 	fmt.Println(minDistance("eat", "ates"))
 }
+
+func TestFindLongestWord(t *testing.T) {
+	fmt.Println(findLongestWord("adpldaplet",
+		[]string{"app", "adapt", "apple", "apldat"}))
+}
