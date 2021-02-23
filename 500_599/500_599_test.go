@@ -22,3 +22,7 @@ func TestFindLongestWord(t *testing.T) {
 	fmt.Println(findLongestWord("adpldaplet",
 		[]string{"app", "adapt", "apple", "apldat"}))
 }
+
+func TestSingleNonDuplicate(t *testing.T) {
+	fmt.Println(singleNonDuplicate([]int{5, 7, 7, 8, 8}))
+}

@@ -126,3 +126,7 @@ func TestValidPalindrome(t *testing.T) {
 func TestFindMin(t *testing.T) {
 	fmt.Println(findMin([]int{3, 4, 6, -5, -2, -1, 0, 2}))
 }
+
+func TestFindMinII(t *testing.T) {
+	fmt.Println(findMinII([]int{-7, -7, -7, -7, -7, -7, -7, -1, 0, 2}))
+}
