@@ -149,3 +149,18 @@ func TestJump(t *testing.T) {
 func TestMinWindow(t *testing.T) {
 	fmt.Println(minWindow("ABCDBEDFFBGHDI", "BDG"))
 }
+
+func TestRotateList(t *testing.T) {
+	l1 := &ListNode{Val: 1}
+	l2 := &ListNode{Val: 4}
+	l3 := &ListNode{Val: 5}
+	l4 := &ListNode{Val: 9}
+	l1.Next = l2
+	l2.Next = l3
+	l3.Next = l4
+	fmt.Println(rotateRight(l1, 2))
+}
+
+func TestMySqrt(t *testing.T) {
+	fmt.Println(mySqrt(8))
+}

@@ -25,7 +25,6 @@ func searchRangeByBinarySearch(nums []int, target int) []int {
 		} else if nums[mid] < target {
 			low = mid + 1
 		} else {
-
 			for start = mid; start-1 >= 0 && nums[start-1] == target; {
 				start--
 			}
