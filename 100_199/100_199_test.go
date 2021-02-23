@@ -122,3 +122,7 @@ func TestTwoSumArrayIsSorted(t *testing.T) {
 func TestValidPalindrome(t *testing.T) {
 	fmt.Println(isPalindrome("0P"))
 }
+
+func TestFindMin(t *testing.T) {
+	fmt.Println(findMin([]int{3, 4, 6, -5, -2, -1, 0, 2}))
+}
