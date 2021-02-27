@@ -130,3 +130,16 @@ func TestFindMin(t *testing.T) {
 func TestFindMinII(t *testing.T) {
 	fmt.Println(findMinII([]int{-7, -7, -7, -7, -7, -7, -7, -1, 0, 2}))
 }
+
+func TestInsertionSortList(t *testing.T) {
+	l1 := &ListNode{Val: 11}
+	l2 := &ListNode{Val: 222}
+	l3 := &ListNode{Val: 3}
+	l4 := &ListNode{Val: 44}
+	l5 := &ListNode{Val: 55}
+	l1.Next = l2
+	l2.Next = l3
+	l3.Next = l4
+	l4.Next = l5
+	fmt.Println(insertionSortList(l1))
+}
