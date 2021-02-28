@@ -143,3 +143,18 @@ func TestInsertionSortList(t *testing.T) {
 	l4.Next = l5
 	fmt.Println(insertionSortList(l1))
 }
+
+func TestReorderList(t *testing.T) {
+	l1 := &ListNode{Val: 11}
+	l2 := &ListNode{Val: 222}
+	l3 := &ListNode{Val: 3}
+	l4 := &ListNode{Val: 44}
+	l5 := &ListNode{Val: 55}
+	l6 := &ListNode{Val: 66}
+	l1.Next = l2
+	l2.Next = l3
+	l3.Next = l4
+	l4.Next = l5
+	l5.Next = l6
+	reorderList(l1)
+}

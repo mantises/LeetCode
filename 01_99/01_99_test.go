@@ -164,3 +164,27 @@ func TestRotateList(t *testing.T) {
 func TestMySqrt(t *testing.T) {
 	fmt.Println(mySqrt(8))
 }
+
+func TestDeleteDuplicatesII(t *testing.T) {
+	l1 := &ListNode{Val: 4}
+	l2 := &ListNode{Val: 4}
+	l3 := &ListNode{Val: 4}
+	l4 := &ListNode{Val: 4}
+	l1.Next = l2
+	l2.Next = l3
+	l3.Next = l4
+	fmt.Println(deleteDuplicatesII(l1))
+}
+
+func TestReverseBetween(t *testing.T) {
+	l1 := &ListNode{Val: 1}
+	l2 := &ListNode{Val: 2}
+	l3 := &ListNode{Val: 3}
+	l4 := &ListNode{Val: 4}
+	l5 := &ListNode{Val: 5}
+	l1.Next = l2
+	l2.Next = l3
+	l3.Next = l4
+	l4.Next = l5
+	fmt.Println(reverseBetween(l1, 5, 5))
+}
