@@ -51,3 +51,16 @@ func TestNumSquares(t *testing.T) {
 func TestCountPrimes(t *testing.T) {
 	fmt.Println(countPrimes(10))
 }
+
+func TestRemoveElements(t *testing.T) {
+	l1 := &ListNode{Val: 1}
+	l2 := &ListNode{Val: 2}
+	l3 := &ListNode{Val: 3}
+	l4 := &ListNode{Val: 2}
+	l5 := &ListNode{Val: 5}
+	l1.Next = l2
+	l2.Next = l3
+	l3.Next = l4
+	l4.Next = l5
+	fmt.Println(removeElements(l1, 2))
+}
