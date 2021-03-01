@@ -84,3 +84,16 @@ func printList(l *ListNode) {
 	}
 	fmt.Println()
 }
+
+func TestPlusOne(t *testing.T) {
+	l1 := &ListNode{Val: 1}
+	l2 := &ListNode{Val: 9}
+	l3 := &ListNode{Val: 9}
+	l4 := &ListNode{Val: 9}
+	l5 := &ListNode{Val: 9}
+	l1.Next = l2
+	l2.Next = l3
+	l3.Next = l4
+	l4.Next = l5
+	printList(plusOne(l1))
+}

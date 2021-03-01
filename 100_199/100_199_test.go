@@ -158,3 +158,19 @@ func TestReorderList(t *testing.T) {
 	l5.Next = l6
 	reorderList(l1)
 }
+
+func TestCopyRandomList(t *testing.T) {
+	l1 := &Node{Val: 11}
+	l2 := &Node{Val: 222}
+	l3 := &Node{Val: 3}
+	l4 := &Node{Val: 44}
+	l1.Next = l2
+	l2.Next = l3
+	l3.Next = l4
+	l1.Random = l2
+	l2.Random = l1
+	l3.Random = l4
+	l4.Random = l3
+
+	copyRandomList(l1)
+}
