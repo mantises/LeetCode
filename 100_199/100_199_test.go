@@ -174,3 +174,40 @@ func TestCopyRandomList(t *testing.T) {
 
 	copyRandomList(l1)
 }
+
+func TestConvertSortedArray(t *testing.T) {
+	s := sortedArrayToBST([]int{-3, 0, 1, 4, 6})
+	fmt.Println(s)
+}
+
+func TestLevelOrderTraversalII(t *testing.T) {
+	root := &TreeNode{
+		Val: 0,
+		Left: &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
+				Val:   10,
+				Left:  nil,
+				Right: nil,
+			},
+			Right: &TreeNode{
+				Val: 78,
+				Left: &TreeNode{
+					Val:  1443546,
+					Left: nil,
+					Right: &TreeNode{
+						Val: 10,
+					},
+				},
+				Right: nil,
+			},
+		},
+		Right: &TreeNode{
+			Val: 9999,
+			Left: &TreeNode{
+				Val: 119,
+			},
+		},
+	}
+	fmt.Println(levelOrderBottom(root))
+}

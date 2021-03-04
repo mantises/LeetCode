@@ -24,7 +24,7 @@ func reorderList(head *ListNode) {
 	mid := getMid(head)
 	t := mid.Next
 	mid.Next = nil
-	tail := reverse(t)
+	tail := reverseList(t)
 	newHead := &ListNode{}
 	cur := newHead
 	for head != nil || tail != nil {
@@ -42,7 +42,7 @@ func reorderList(head *ListNode) {
 	head = newHead.Next
 }
 
-func reverse(l *ListNode) *ListNode {
+func reverseList(l *ListNode) *ListNode {
 	if l == nil || l.Next == nil {
 		return l
 	}

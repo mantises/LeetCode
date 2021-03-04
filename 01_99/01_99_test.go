@@ -201,3 +201,7 @@ func TestPartition(t *testing.T) {
 	l4.Next = l5
 	fmt.Println(partition(l1, 3))
 }
+
+func TestFirstMissingPositive(t *testing.T) {
+	fmt.Println(firstMissingPositive([]int{2, 1, 4, 3, 0, 4}))
+}
