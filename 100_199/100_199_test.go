@@ -211,3 +211,67 @@ func TestLevelOrderTraversalII(t *testing.T) {
 	}
 	fmt.Println(levelOrderBottom(root))
 }
+
+func TestRightSideView(t *testing.T) {
+	root := &TreeNode{
+		Val: 0,
+		Left: &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
+				Val:   10,
+				Left:  nil,
+				Right: nil,
+			},
+			Right: &TreeNode{
+				Val: 78,
+				Left: &TreeNode{
+					Val:  1443546,
+					Left: nil,
+					Right: &TreeNode{
+						Val: 10,
+					},
+				},
+				Right: nil,
+			},
+		},
+		Right: &TreeNode{
+			Val: 9999,
+			Left: &TreeNode{
+				Val: 119,
+			},
+		},
+	}
+	fmt.Println(rightSideView(root))
+}
+
+func TestRightSideViewDFS(t *testing.T) {
+	root := &TreeNode{
+		Val: 0,
+		Left: &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
+				Val:   10,
+				Left:  nil,
+				Right: nil,
+			},
+			Right: &TreeNode{
+				Val: 78,
+				Left: &TreeNode{
+					Val:  1443546,
+					Left: nil,
+					Right: &TreeNode{
+						Val: 10,
+					},
+				},
+				Right: nil,
+			},
+		},
+		Right: &TreeNode{
+			Val: 9999,
+			Left: &TreeNode{
+				Val: 119,
+			},
+		},
+	}
+	fmt.Println(rightSideViewDFS(root))
+}
