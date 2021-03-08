@@ -20,7 +20,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func inorderTraversalByRecursive(root *TreeNode) []int {
+func inorderTraversal(root *TreeNode) []int {
 	var res []int
 	if root == nil {
 		return res
@@ -35,7 +35,7 @@ func inorderTraversalByRecursive(root *TreeNode) []int {
 	return res
 }
 
-func inorderTraversal(root *TreeNode) []int {
+func inorderTraversalNonRecursive(root *TreeNode) []int {
 	if root == nil {
 		return []int{}
 	}

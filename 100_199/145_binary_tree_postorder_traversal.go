@@ -58,7 +58,7 @@ func postorderTraversal(root *TreeNode) []int {
 	}
 	return res
 }
-func postorderTraversalByRecursive(root *TreeNode) []int {
+func postorderTraversalNonRecursive(root *TreeNode) []int {
 	if root == nil {
 		return []int{}
 	}

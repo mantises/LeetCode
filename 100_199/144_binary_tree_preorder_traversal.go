@@ -45,7 +45,7 @@ func preorderTraversal(root *TreeNode) []int {
 	return res
 }
 
-func preorderTraversalByRecursive(root *TreeNode) []int {
+func preorderTraversalNonRecursive(root *TreeNode) []int {
 	if root == nil {
 		return []int{}
 	}
