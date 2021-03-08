@@ -37,6 +37,21 @@ func postorderTraversal(root *TreeNode) []int {
 		return []int{}
 	}
 	var res []int
+	if root.Left != nil {
+		res = append(res, postorderTraversal(root.Left)...)
+	}
+	if root.Right != nil {
+		res = append(res, postorderTraversal(root.Right)...)
+	}
+	res = append(res, root.Val)
+	return res
+}
+
+func postorderTraversalNonRecursive(root *TreeNode) []int {
+	if root == nil {
+		return []int{}
+	}
+	var res []int
 	stack := make([]*TreeNode, 0, 0)
 	stack = append(stack, root)
 	var pre *TreeNode
@@ -56,19 +71,5 @@ func postorderTraversal(root *TreeNode) []int {
 			}
 		}
 	}
-	return res
-}
-func postorderTraversalNonRecursive(root *TreeNode) []int {
-	if root == nil {
-		return []int{}
-	}
-	var res []int
-	if root.Left != nil {
-		res = append(res, postorderTraversal(root.Left)...)
-	}
-	if root.Right != nil {
-		res = append(res, postorderTraversal(root.Right)...)
-	}
-	res = append(res, root.Val)
 	return res
 }
