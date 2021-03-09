@@ -35,7 +35,7 @@ inorder is guaranteed to be the inorder traversal of the tree.
  *     Right *TreeNode
  * }
  */
-func buildTree(preorder []int, inorder []int) *TreeNode {
+func buildTreeFromPreAndInOrder(preorder []int, inorder []int) *TreeNode {
 	if len(preorder) == 0 {
 		return nil
 	}
@@ -50,8 +50,8 @@ func buildTree(preorder []int, inorder []int) *TreeNode {
 	}
 	fmt.Println(inorder[:index], inorder[index+1:])
 	fmt.Println(preorder[1:1+index], preorder[index+1:])
-	left := buildTree(preorder[1:1+index], inorder[:index])
-	right := buildTree(preorder[index+1:], inorder[index+1:])
+	left := buildTreeFromPreAndInOrder(preorder[1:1+index], inorder[:index])
+	right := buildTreeFromPreAndInOrder(preorder[index+1:], inorder[index+1:])
 	return &TreeNode{
 		Val:   preorder[0],
 		Left:  left,

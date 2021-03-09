@@ -306,10 +306,46 @@ func TestFlatten(t *testing.T) {
 		},
 	}
 	flatten(root)
-
 }
 
-func TestBuildTree(t *testing.T) {
-	v := buildTree([]int{3, 9, 2, 6, 20, 15, 7}, []int{2, 9, 6, 3, 15, 20, 7})
+func TestBuildTreeFromPreAndInOrder(t *testing.T) {
+	v := buildTreeFromPreAndInOrder([]int{3, 9, 2, 6, 20, 15, 7}, []int{2, 9, 6, 3, 15, 20, 7})
 	fmt.Println(v)
+}
+
+func TestBuildTreeFromInAndPostOrder(t *testing.T) {
+	v := buildTreeFromInAndPostOrder([]int{9, 3, 15, 20, 7}, []int{9, 15, 7, 20, 3})
+	fmt.Println(v)
+}
+
+func TestIsBalanced(t *testing.T) {
+	root := &TreeNode{
+		Val: 0,
+		Left: &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
+				Val:   10,
+				Left:  nil,
+				Right: nil,
+			},
+			Right: &TreeNode{
+				Val: 78,
+				Left: &TreeNode{
+					Val:  1443546,
+					Left: nil,
+					Right: &TreeNode{
+						Val: 10,
+					},
+				},
+				Right: nil,
+			},
+		},
+		Right: &TreeNode{
+			Val: 9999,
+			Left: &TreeNode{
+				Val: 119,
+			},
+		},
+	}
+	fmt.Println(isBalanced(root))
 }
