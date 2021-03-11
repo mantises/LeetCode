@@ -34,3 +34,19 @@ func sumOfLeftLeaves(root *TreeNode) int {
 }
 
 // TODO solve this problem by DFS & WFS
+func sumOfLeftLeavesDFS(root *TreeNode) int {
+	sum := 0
+	var dfs func(r *TreeNode)
+	dfs = func(r *TreeNode) {
+		if r == nil {
+			return
+		}
+		if r.Left != nil && r.Left.Left == nil && r.Left.Right == nil {
+			sum += r.Left.Val
+		}
+		dfs(r.Left)
+		dfs(r.Right)
+	}
+	dfs(root)
+	return sum
+}
