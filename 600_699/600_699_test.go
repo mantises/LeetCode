@@ -24,3 +24,28 @@ func TestJudgeSquareSum(t *testing.T) {
 func TestValidPalindrome(t *testing.T) {
 	fmt.Println(validPalindrome("a"))
 }
+
+func TestLongestUnivaluePath(t *testing.T) {
+	root := &TreeNode{
+		Val: 1,
+		Left: &TreeNode{
+			Val: 4,
+			Left: &TreeNode{
+				Val: 4,
+			},
+			Right: &TreeNode{
+				Val: 4,
+			},
+		},
+		Right: &TreeNode{
+			Val: 5,
+			Left: &TreeNode{
+				Val: 4,
+			},
+			Right: &TreeNode{
+				Val: 5,
+			},
+		},
+	}
+	fmt.Println(longestUnivaluePath(root))
+}

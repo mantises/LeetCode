@@ -35,12 +35,13 @@ The number of nodes in the tree is in the range [1, 10^4].
 func diameterOfBinaryTree(root *TreeNode) int {
 	diameter := 0
 	var dfs func(root *TreeNode) int
-	dfs = func(root *TreeNode) int {
-		if root == nil {
+	// 返回以 node 为端点的最长路径长度
+	dfs = func(node *TreeNode) int {
+		if node == nil {
 			return 0
 		}
-		left := dfs(root.Left)
-		right := dfs(root.Right)
+		left := dfs(node.Left)
+		right := dfs(node.Right)
 		diameter = max(diameter, left+right)
 		return max(left, right) + 1
 	}

@@ -64,3 +64,35 @@ func TestRemoveElements(t *testing.T) {
 	l4.Next = l5
 	fmt.Println(removeElements(l1, 2))
 }
+
+func TestZigzagLevelOrder(t *testing.T) {
+	root := &TreeNode{
+		Val: 0,
+		Left: &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
+				Val:   10,
+				Left:  nil,
+				Right: nil,
+			},
+			Right: &TreeNode{
+				Val: 78,
+				Left: &TreeNode{
+					Val:  1443546,
+					Left: nil,
+					Right: &TreeNode{
+						Val: 10,
+					},
+				},
+				Right: nil,
+			},
+		},
+		Right: &TreeNode{
+			Val: 9999,
+			Left: &TreeNode{
+				Val: 119,
+			},
+		},
+	}
+	fmt.Println(binaryTreePaths(root))
+}
