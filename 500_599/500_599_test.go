@@ -26,3 +26,35 @@ func TestFindLongestWord(t *testing.T) {
 func TestSingleNonDuplicate(t *testing.T) {
 	fmt.Println(singleNonDuplicate([]int{5, 7, 7, 8, 8}))
 }
+
+func TestDiameterOfBinaryTree(t *testing.T) {
+	root := &TreeNode{
+		Val: 0,
+		Left: &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
+				Val:   10,
+				Left:  nil,
+				Right: nil,
+			},
+			Right: &TreeNode{
+				Val: 78,
+				Left: &TreeNode{
+					Val:  1443546,
+					Left: nil,
+					Right: &TreeNode{
+						Val: 10,
+					},
+				},
+				Right: nil,
+			},
+		},
+		Right: &TreeNode{
+			Val: 9999,
+			Left: &TreeNode{
+				Val: 119,
+			},
+		},
+	}
+	fmt.Println(diameterOfBinaryTree(root))
+}
