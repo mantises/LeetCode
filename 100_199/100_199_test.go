@@ -381,3 +381,72 @@ func TestZigzagLevelOrder(t *testing.T) {
 	}
 	fmt.Println(zigzagLevelOrder(root))
 }
+
+func TestConstructorBSTIterator(t *testing.T) {
+	root := &TreeNode{
+		Val: 0,
+		Left: &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
+				Val:   10,
+				Left:  nil,
+				Right: nil,
+			},
+			Right: &TreeNode{
+				Val: 78,
+				Left: &TreeNode{
+					Val:  1443546,
+					Left: nil,
+					Right: &TreeNode{
+						Val: 10,
+					},
+				},
+				Right: nil,
+			},
+		},
+		Right: &TreeNode{
+			Val: 9999,
+			Left: &TreeNode{
+				Val: 119,
+			},
+		},
+	}
+	construct := ConstructorBSTIterator(root)
+	for construct.HasNext() {
+		fmt.Println(construct.Next())
+	}
+}
+
+func TestPathSum(t *testing.T) {
+	root := &TreeNode{
+		Val: 0,
+		Left: &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
+				Val:  10,
+				Left: nil,
+				Right: &TreeNode{
+					Val: 10089,
+				},
+			},
+			Right: &TreeNode{
+				Val: 78,
+				Left: &TreeNode{
+					Val:  1443546,
+					Left: nil,
+					Right: &TreeNode{
+						Val: 10,
+					},
+				},
+				Right: nil,
+			},
+		},
+		Right: &TreeNode{
+			Val: 9999,
+			Left: &TreeNode{
+				Val: 101,
+			},
+		},
+	}
+	fmt.Println(pathSum(root, 10100))
+}

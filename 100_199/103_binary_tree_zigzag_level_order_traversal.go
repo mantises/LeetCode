@@ -52,7 +52,7 @@ func zigzagLevelOrder(root *TreeNode) [][]int {
 		}
 		if level%2 != 0 {
 			for j := 0; j < len(val)/2; j++ {
-				val[j], val[len(val)-1-j] = val[len(val)-1-j], val[i]
+				val[j], val[len(val)-1-j] = val[len(val)-1-j], val[j]
 			}
 		}
 		stack = tmp

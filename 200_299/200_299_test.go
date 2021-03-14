@@ -65,7 +65,7 @@ func TestRemoveElements(t *testing.T) {
 	fmt.Println(removeElements(l1, 2))
 }
 
-func TestZigzagLevelOrder(t *testing.T) {
+func TestBinaryTreePaths(t *testing.T) {
 	root := &TreeNode{
 		Val: 0,
 		Left: &TreeNode{
@@ -95,4 +95,36 @@ func TestZigzagLevelOrder(t *testing.T) {
 		},
 	}
 	fmt.Println(binaryTreePaths(root))
+}
+
+func TestSerializeAndDeserialize(t *testing.T) {
+	root := &TreeNode{
+		Val: 0,
+		Left: &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
+				Val: 2222,
+				Left: &TreeNode{
+					Val: 5555,
+				},
+			},
+			Right: &TreeNode{
+				Val: 8888,
+			},
+		},
+		Right: &TreeNode{
+			Val: 9999,
+			Left: &TreeNode{
+				Val: 3333,
+			},
+			Right: &TreeNode{
+				Val: 6666,
+			},
+		},
+	}
+	c := &Codec{}
+	v := c.serialize(root)
+	fmt.Println(v)
+	s := c.deserialize(v)
+	fmt.Println(s)
 }
