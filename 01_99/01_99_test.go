@@ -205,3 +205,36 @@ func TestPartition(t *testing.T) {
 func TestFirstMissingPositive(t *testing.T) {
 	fmt.Println(firstMissingPositive([]int{2, 1, 4, 3, 0, 4}))
 }
+
+func TestRecoverTree(t *testing.T) {
+	root := &TreeNode{
+		Val: 10,
+		Left: &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
+				Val:  0,
+				Left: nil,
+				Right: &TreeNode{
+					Val: 3,
+				},
+			},
+			Right: &TreeNode{
+				Val: 6,
+				Left: &TreeNode{
+					Val: 4,
+				},
+				Right: &TreeNode{
+					Val: 7,
+				},
+			},
+		},
+		Right: &TreeNode{
+			Val: 9999,
+			Left: &TreeNode{
+				Val: 101,
+			},
+		},
+	}
+	recoverTree(root)
+	fmt.Println(root)
+}

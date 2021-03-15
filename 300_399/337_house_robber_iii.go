@@ -42,44 +42,19 @@ type TreeNode struct {
 }
 
 func rob(root *TreeNode) int {
-	if root == nil {
-		return 0
-	}
-	levelSum := make([]int, 0)
-	levelNode := make([]*TreeNode, 0)
-	nextLevel := make([]*TreeNode, 0)
-	levelNode = append(levelNode, root)
-	for len(levelNode) > 0 {
-		tmp := 0
-		for _, v := range levelNode {
-			tmp += v.Val
-			if v.Left != nil {
-				nextLevel = append(nextLevel, v.Left)
-			}
-			if v.Right != nil {
-				nextLevel = append(nextLevel, v.Right)
-			}
-		}
-		levelSum = append(levelSum, tmp)
-		levelNode, nextLevel = nextLevel, make([]*TreeNode, 0)
-	}
-
-	return robber(levelSum)
+	robbed, nonRobbed := dfs(root)
+	return max(robbed, nonRobbed)
 }
 
-func robber(levelSum []int) int {
-	if len(levelSum) == 0 {
-		return 0
+func dfs(node *TreeNode) (int, int) {
+	if node == nil {
+		return 0, 0
 	}
-	if len(levelSum) == 1 {
-		return levelSum[0]
-	}
-	if len(levelSum) == 2 {
-		return max(levelSum[0], levelSum[1])
-	}
-	first, second := levelSum[0], max(levelSum[0], levelSum[1])
-	for i := 2; i < len(levelSum); i++ {
-		first, second = second, max(first+levelSum[i], second)
-	}
-	return second
+	leftRobbed, leftNonRobbed := dfs(node.Left)
+	rightRobbed, rightNonRobbed := dfs(node.Right)
+
+	robbed := node.Val + leftNonRobbed + rightNonRobbed
+	nonRobbed := max(leftRobbed, leftNonRobbed) + max(rightRobbed, rightNonRobbed)
+
+	return robbed, nonRobbed
 }
