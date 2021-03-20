@@ -101,3 +101,32 @@ func TestSumOfLeftLeaves(t *testing.T) {
 	fmt.Println(sumOfLeftLeaves(root))
 	fmt.Println(sumOfLeftLeavesDFS(root))
 }
+
+func TestPathSumIII(t *testing.T) {
+	root := &TreeNode{
+		Val: 0,
+		Left: &TreeNode{
+			Val: 1,
+			Left: &TreeNode{
+				Val: 10,
+			},
+			Right: &TreeNode{
+				Val: 78,
+				Left: &TreeNode{
+					Val: 1443546,
+					Right: &TreeNode{
+						Val: 10,
+					},
+				},
+			},
+		},
+		Right: &TreeNode{
+			Val: 9999,
+			Left: &TreeNode{
+				Val: 119,
+			},
+		},
+	}
+	fmt.Println(sumOfLeftLeaves(root))
+	fmt.Println(sumOfLeftLeavesDFS(root))
+}
