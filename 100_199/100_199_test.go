@@ -450,3 +450,41 @@ func TestPathSum(t *testing.T) {
 	}
 	fmt.Println(pathSum(root, 10100))
 }
+
+func TestMaxPathSum(t *testing.T) {
+	root := &TreeNode{
+		Val: -10,
+		Left: &TreeNode{
+			Val: 9,
+		},
+		// Right: &TreeNode{
+		// 	Val: 20,
+		// 	Left: &TreeNode{
+		// 		Val: 15,
+		// 	},
+		// 	Right: &TreeNode{
+		// 		Val: 7,
+		// 	},
+		// },
+	}
+	fmt.Println(maxPathSum(root))
+}
+
+func TestSumNumbers(t *testing.T) {
+	root := &TreeNode{
+		Val: 5,
+		Left: &TreeNode{
+			Val: 9,
+		},
+		Right: &TreeNode{
+			Val: 6,
+			Left: &TreeNode{
+				Val: 1,
+			},
+			Right: &TreeNode{
+				Val: 8,
+			},
+		},
+	}
+	fmt.Println(sumNumbers(root))
+}

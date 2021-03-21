@@ -35,13 +35,33 @@ Return 3. The paths that sum to 8 are:
  *     Right *TreeNode
  * }
  */
+/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
 func pathSum(root *TreeNode, sum int) int {
-	if root == nil {
-		return 0
+	var res int
+	// 前缀和  + 递归
+	var dfs func(*TreeNode, map[int]int, int)
+	dfs = func(node *TreeNode, prefix map[int]int, curSum int) {
+		if node == nil {
+			return
+		}
+		// 更新前缀和
+		curSum += node.Val
+		// 当前路径中存在以当前节点为终点的和为sum的子路径
+		if v, ok := prefix[curSum-sum]; ok {
+			res += v
+		}
+		prefix[curSum]++                // 将当前节点加入路径
+		dfs(node.Left, prefix, curSum)  // 在其左子树中递归寻找
+		dfs(node.Right, prefix, curSum) // 在其右子树中递归寻找
+		prefix[curSum]--
 	}
-	if root.Val == sum {
-		return 1
-	}
-	return pathSum(root.Left, sum-root.Val) + pathSum(root.Right, sum-root.Val) +
-		pathSum(root.Left, sum) + pathSum(root.Right, sum)
+	dfs(root, map[int]int{0: 1}, 0)
+	return res
 }

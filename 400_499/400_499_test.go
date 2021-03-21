@@ -104,29 +104,34 @@ func TestSumOfLeftLeaves(t *testing.T) {
 
 func TestPathSumIII(t *testing.T) {
 	root := &TreeNode{
-		Val: 0,
+		Val: 10,
 		Left: &TreeNode{
-			Val: 1,
+			Val: 5,
 			Left: &TreeNode{
-				Val: 10,
+				Val: 3,
+				Left: &TreeNode{
+					Val: 3,
+				},
+				Right: &TreeNode{
+					Val: -2,
+					Right: &TreeNode{
+						Val: 111,
+					},
+				},
 			},
 			Right: &TreeNode{
-				Val: 78,
-				Left: &TreeNode{
-					Val: 1443546,
-					Right: &TreeNode{
-						Val: 10,
-					},
+				Val: 2,
+				Right: &TreeNode{
+					Val: 1,
 				},
 			},
 		},
 		Right: &TreeNode{
-			Val: 9999,
-			Left: &TreeNode{
-				Val: 119,
+			Val: -3,
+			Right: &TreeNode{
+				Val: 11,
 			},
 		},
 	}
-	fmt.Println(sumOfLeftLeaves(root))
-	fmt.Println(sumOfLeftLeavesDFS(root))
+	fmt.Println(pathSum(root, 8))
 }

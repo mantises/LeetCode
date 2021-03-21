@@ -90,3 +90,22 @@ func TestFindMode(t *testing.T) {
 	}
 	fmt.Println(findMode(root))
 }
+
+func TestFindTilt(t *testing.T) {
+	root := &TreeNode{
+		Val: 5,
+		Left: &TreeNode{
+			Val: 9,
+		},
+		Right: &TreeNode{
+			Val: 6,
+			Left: &TreeNode{
+				Val: 1,
+			},
+			Right: &TreeNode{
+				Val: 8,
+			},
+		},
+	}
+	fmt.Println(findTilt(root))
+}

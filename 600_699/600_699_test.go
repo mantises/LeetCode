@@ -49,3 +49,22 @@ func TestLongestUnivaluePath(t *testing.T) {
 	}
 	fmt.Println(longestUnivaluePath(root))
 }
+
+func TestTree2str(t *testing.T) {
+	root := &TreeNode{
+		Val: 5,
+		Left: &TreeNode{
+			Val: 9,
+		},
+		Right: &TreeNode{
+			Val: 6,
+			Left: &TreeNode{
+				Val: 1,
+			},
+			Right: &TreeNode{
+				Val: 8,
+			},
+		},
+	}
+	fmt.Println(tree2str(root))
+}
