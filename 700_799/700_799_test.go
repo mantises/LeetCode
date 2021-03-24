@@ -54,3 +54,28 @@ func TestRemoveElements(t *testing.T) {
 	l4.Next = l5
 	fmt.Println(splitListToParts(l1, 3))
 }
+
+func TestSumNumbers(t *testing.T) {
+	root := &TreeNode{
+		Val: 6,
+		Left: &TreeNode{
+			Val: 4,
+			Left: &TreeNode{
+				Val: 1,
+			},
+			Right: &TreeNode{
+				Val: 5,
+			},
+		},
+		Right: &TreeNode{
+			Val: 8,
+			Left: &TreeNode{
+				Val: 7,
+			},
+			Right: &TreeNode{
+				Val: 9,
+			},
+		},
+	}
+	fmt.Println(splitBST(root, 8))
+}
