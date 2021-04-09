@@ -1,7 +1,5 @@
 package _100_199
 
-import "fmt"
-
 /*
 Given two integer arrays preorder and inorder where preorder is the preorder traversal
 of a binary tree and inorder is the inorder traversal of the same tree, construct and
@@ -48,8 +46,6 @@ func buildTreeFromPreAndInOrder(preorder []int, inorder []int) *TreeNode {
 			break
 		}
 	}
-	fmt.Println(inorder[:index], inorder[index+1:])
-	fmt.Println(preorder[1:1+index], preorder[index+1:])
 	left := buildTreeFromPreAndInOrder(preorder[1:1+index], inorder[:index])
 	right := buildTreeFromPreAndInOrder(preorder[index+1:], inorder[index+1:])
 	return &TreeNode{

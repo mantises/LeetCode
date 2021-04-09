@@ -38,3 +38,10 @@ func TestParentPath(t *testing.T) {
 	}
 	fmt.Println(distanceK(root, root.Left.Right.Left.Right, 3))
 }
+
+func TestConstructFromPrePost(t *testing.T) {
+	pre := []int{1, 2, 4, 5, 3, 6, 7}
+	post := []int{4, 5, 2, 6, 7, 3, 1}
+	root := constructFromPrePost(pre, post)
+	fmt.Printf("%v\n", root)
+}
