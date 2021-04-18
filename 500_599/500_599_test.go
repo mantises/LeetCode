@@ -109,3 +109,32 @@ func TestFindTilt(t *testing.T) {
 	}
 	fmt.Println(findTilt(root))
 }
+
+func TestPreorder(t *testing.T) {
+	node := &Node{
+		Val: 1,
+		Children: []*Node{
+			&Node{
+				Val: 2,
+				Children: []*Node{
+					&Node{
+						Val:      5,
+						Children: []*Node{},
+					},
+
+					&Node{
+						Val:      6,
+						Children: []*Node{},
+					},
+				},
+			}, &Node{
+				Val:      3,
+				Children: []*Node{},
+			}, &Node{
+				Val:      4,
+				Children: []*Node{},
+			},
+		},
+	}
+	fmt.Println(preorder(node))
+}

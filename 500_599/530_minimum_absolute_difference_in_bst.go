@@ -87,10 +87,3 @@ func diff(pre, cur *TreeNode) int {
 	}
 	return cur.Val - pre.Val
 }
-
-func min(a, b int) int {
-	if a <= b {
-		return a
-	}
-	return b
-}

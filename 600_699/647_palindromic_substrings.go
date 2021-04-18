@@ -25,17 +25,33 @@ func countSubstrings(s string) int {
 		return 1
 	}
 	count := 0
-	var dp [][]bool
-	for i := 0; i < len(s); i++ {
-		dp = append(dp, make([]bool, len(s)))
-	}
+	dp := make([]bool, len(s))
 	for i := 0; i < len(s); i++ {
 		for j := 0; j <= i; j++ {
-			if s[i] == s[j] && (i-j < 2 || dp[j+1][i-1]) {
-				dp[j][i] = true
+			if s[i] == s[j] && (i-j < 2 || dp[j+1]) {
+				dp[j] = true
 				count++
+			} else {
+				dp[j] = false
 			}
 		}
+	}
+	return count
+}
+
+func countSubstringsByExtend(s string) int {
+	count := 0
+	var helper func(int, int)
+	helper = func(l int, r int) {
+		for l > 0 && r < len(s) && s[l] == s[r] {
+			l--
+			r++
+			count++
+		}
+	}
+	for i := 0; i < len(s); i++ {
+		helper(i, i)
+		helper(i, i+1)
 	}
 	return count
 }
