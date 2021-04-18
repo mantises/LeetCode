@@ -30,6 +30,15 @@ s will only consist of "0" or "1" characters.
 */
 func countBinarySubstrings(s string) int {
 	count := 0
-
+	for i := 0; i < len(s)-1; i++ {
+		if s[i]^s[i+1] == 1 {
+			index := 0
+			for i-index >= 0 && i+1+index < len(s) &&
+				s[i] == s[i-index] && s[i+1] == s[i+1+index] {
+				count++
+				index++
+			}
+		}
+	}
 	return count
 }

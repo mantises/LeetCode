@@ -238,3 +238,7 @@ func TestRecoverTree(t *testing.T) {
 	recoverTree(root)
 	fmt.Println(root)
 }
+
+func TestLengthOfLongestSubstring(t *testing.T) {
+	fmt.Println(lengthOfLongestSubstring("wpwwpwaxwdq"))
+}

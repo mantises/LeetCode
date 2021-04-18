@@ -128,3 +128,7 @@ func TestSerializeAndDeserialize(t *testing.T) {
 	s := c.deserialize(v)
 	fmt.Println(s)
 }
+
+func TestCalculator(t *testing.T) {
+	fmt.Println(calculate("3+2*2"))
+}

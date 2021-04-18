@@ -43,5 +43,5 @@ p and q will exist in the BST.
  */
 
 func lowestCommonAncestorBST(root, p, q *TreeNode) *TreeNode {
-
+	return nil
 }
